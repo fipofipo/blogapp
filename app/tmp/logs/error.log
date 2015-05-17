@@ -1,0 +1,20 @@
+2015-05-17 03:45:07 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/var/www/application/current/app/Config/database.php, line 4]
+2015-05-17 03:45:07 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /
+Stack Trace:
+#0 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/applic...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/applic...', 4, Array)
+#2 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/applic...', 4, Array)
+#3 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-17 03:46:03 Error: Fatal Error (4): syntax error, unexpected 'functin' (T_STRING), expecting variable (T_VARIABLE) in [/var/www/application/current/app/Config/database.php, line 8]
+2015-05-17 03:46:03 Error: [FatalErrorException] syntax error, unexpected 'functin' (T_STRING), expecting variable (T_VARIABLE)
+Request URL: /
+Stack Trace:
+#0 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/applic...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/applic...', 8, Array)
+#2 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/applic...', 8, Array)
+#3 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
