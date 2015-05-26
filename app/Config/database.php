@@ -7,7 +7,7 @@ class DATABASE_CONFIG {
 
 	public function __construct() {
 		$this->default = [
-			'detasource'	=> 'Database/Mysql',
+			'datasource'	=> 'Database/Mysql',
 			'persistent'	=> false,
 			'host'				=> $this->read('MYSQL_DB_HOST'),
 			'login'				=> $this->read('MYSQL_USERNAME'),
@@ -17,7 +17,7 @@ class DATABASE_CONFIG {
 			'encoding'		=> 'utf8',
 		];
 		$this->test = [
-			'detasource'	=> 'Database/Mysql',
+			'datasource'	=> 'Database/Mysql',
 			'persistent'	=> false,
 			'host'				=> $this->read('MYSQL_DB_HOST'),
 			'login'				=> $this->read('MYSQL_USERNAME'),

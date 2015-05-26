@@ -16,6 +16,7 @@
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
+require_once dirname(dirname(__FILE__)) . DS . 'Vendor' . DS . 'autoload.php';
 
 include dirname(__FILE__) . DS . 'bootstrap' . DS . 'environments.php';
 /**
@@ -62,6 +63,9 @@ include dirname(__FILE__) . DS . 'bootstrap' . DS . 'environments.php';
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
+
+CakePlugin::load('Migrations');
+CakePlugin::load('BoostCake');
 
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By default CakePHP bundles two filters:
