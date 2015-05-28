@@ -1,9 +1,9 @@
 {
-    "name": "php_ci_book/blogapp",
+    "name": "phpcibook/blogapp",
     "authors": [
         {
-            "name": "Nanbu Yusuke",
-            "email": "fipofipo.me@gmail.com"
+            "name": "Kaz Watanabe",
+            "email": "kaz@decr.jp"
         }
     ],
     "config": {
@@ -11,20 +11,22 @@
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url":  "git://github.com/sizuhiko/Bdd.git"
+           "type": "vcs",
+           "url": "git://github.com/sizuhiko/Bdd.git"
         }
     ],
     "require": {
         "cakephp/cakephp": "2.5.*",
         "josegonzalez/cakephp-environments": "1.0.0",
         "cakedc/migrations": "~2.3",
-        "fzaninotto/faker": "1.4.*",
-        "slywalker/boost_cake": "*"
+        "slywalker/boost_cake": "*",
+        "cakedc/users": "2.1.0",
+        "cakedc/utils": "*",
+        "cakedc/search": "*"
     },
     "require-dev": {
-        "pear/console_commandline": "@dev",
-        "pear/pear_exception": "@dev",
+       "pear/console_commandline": "@dev",
+       "pear/pear_exception": "@dev",
         "sizuhiko/Bdd": "dev-master",
         "behat/mink-goutte-driver": "*",
         "sizuhiko/fabricate": "1.*",
@@ -32,5 +34,5 @@
         "cakephp/cakephp-codesniffer": "0.1.*",
         "phpmd/phpmd": "2.*",
         "sebastian/phpcpd": "2.*"
-    }
+   }
 }

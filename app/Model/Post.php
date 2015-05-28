@@ -1,5 +1,6 @@
 <?php
 App::uses('AppModel', 'Model');
+
 /**
  * Post Model
  *
@@ -8,7 +9,7 @@ App::uses('AppModel', 'Model');
  * @copyright php_ci_book
  * @link https://github.com/phpcibook/blogapp/blob/master/app/Model/Post.php
  * @since 1.0
- * @author 南部 <fipofipo.me@gmail.com>
+ * @auther 作成者の名前 <test@example.com>
  *
  */
 class Post extends AppModel {
@@ -17,7 +18,6 @@ class Post extends AppModel {
  * 一覧表示時のタイトルに使用するカラム名
  *
  * @var string
- *
  */
 	public $displayField = 'title';
 
@@ -38,4 +38,24 @@ class Post extends AppModel {
 			],
 		],
 	];
+
+	public $actsAs = ['Containable'];
+
+	public $recursive = -1;
+
+	public $belongsTo = [
+		'Author' => [
+			'className' => 'Users.User',
+			'foreignKey' => 'author_id'
+		]
+	];
+
+	public function getPaginateSettings($username) {
+		return [
+			'limit' => 5,
+			'order' => ['Post.id' => 'desc'],
+			'contain' => ['Author'],
+			'conditions' => ['Author.username' => $username],
+		];
+	}
 }

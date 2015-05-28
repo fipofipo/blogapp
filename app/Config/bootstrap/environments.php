@@ -1,5 +1,4 @@
 <?php
-
 CakePlugin::load('Environments');
 App::uses('Environment', 'Environments.Lib');
 
@@ -17,6 +16,3 @@ switch ($env) {
 }
 
 Environment::start();
-
-
-

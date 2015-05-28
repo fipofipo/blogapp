@@ -11,13 +11,10 @@
  * @since         CakePHP(tm) v 0.2.9
  */
 
-/**
- * Here, we are connecting '/' (base path) to controller called 'Pages',
- * its action called 'display', and we pass a param to select the view file
- * to use (in this case, /app/View/Pages/home.ctp)...
- */
 	Router::connect('/blogs/new', ['controller' => 'posts', 'action' => 'add']);
-	Router::connect('/:user_account/blog', ['controller' => 'posts', 'action' => 'index'], ['user_account']);
+	Router::connect('/:user_account/blog/*', ['controller' => 'posts', 'action' => 'index'], ['user_account']);
+	Router::connect('/users/login', array('controller' => 'app_users', 'action' => 'login'));
+	Router::connect('/users/logout', array('controller' => 'app_users', 'action' => 'logout'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
